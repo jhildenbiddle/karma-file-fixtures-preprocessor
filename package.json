@@ -1,0 +1,31 @@
+{
+  "name": "karma-file-fixtures-preprocessor",
+  "version": "0.0.0",
+  "description": "A Karma plugin that stores fixture file content as a global object",
+  "author": "John Hildenbiddle <http://hildenbiddle.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://jhildenbiddle@github.com/jhildenbiddle/karma-file-fixtures-preprocessor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/issues"
+  },
+  "keywords": [
+    "karma",
+    "plugin",
+    "preprocessor",
+    "karma-plugin",
+    "karma-preprocessor",
+    "file",
+    "files",
+    "fixture",
+    "fixtures"
+  ],
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^5.11.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,12 @@
+# Folders
+coverage
+node_modules
+
+# Files
+*.log
+karma-file-fixtures.js
+
+# OS
+._*
+.cache
+.DS_Store
