@@ -1,7 +1,7 @@
 {
   "name": "karma-file-fixtures-preprocessor",
   "version": "0.0.0",
-  "description": "A Karma plugin that stores fixture file content as a global object",
+  "description": "A Karma plugin that stores file content as a global object",
   "author": "John Hildenbiddle <http://hildenbiddle.com>",
   "license": "MIT",
   "homepage": "https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor",
