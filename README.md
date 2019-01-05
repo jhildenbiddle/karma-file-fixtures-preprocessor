@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=developers,frontend,javascript,karma)
 
-A Karma plugin that makes file content accessible from within test environments.
+A Karma plugin that makes file content accessible within test environments.
 
 ---
 
