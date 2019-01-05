@@ -1,7 +1,7 @@
 {
   "name": "karma-file-fixtures-preprocessor",
   "version": "0.0.0",
-  "description": "A Karma plugin that stores file content as a global object",
+  "description": "A Karma plugin that makes file content accessible from within test environments",
   "author": "John Hildenbiddle <http://hildenbiddle.com>",
   "license": "MIT",
   "homepage": "https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor",
@@ -13,15 +13,22 @@
     "url": "https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/issues"
   },
   "keywords": [
-    "karma",
-    "plugin",
-    "preprocessor",
-    "karma-plugin",
-    "karma-preprocessor",
+    "css",
     "file",
     "files",
     "fixture",
-    "fixtures"
+    "fixtures",
+    "html",
+    "javasript",
+    "js",
+    "json",
+    "karma-plugin",
+    "karma-preprocessor",
+    "karma",
+    "plugin",
+    "preprocessor",
+    "text",
+    "txt"
   ],
   "main": "index.js",
   "devDependencies": {
