@@ -75,27 +75,23 @@ console.log(window.__FIXTURES__);
 }
 ```
 
-Fixtures can be accessed via their file path:
-
-```javascript
-var css  = window.__FIXTURES__['tests/fixtures/fixture.css'];
-var html = window.__FIXTURES__['tests/fixtures/fixture.html'];
-var json = window.__FIXTURES__['tests/fixtures/fixture.json'];
-var txt  = window.__FIXTURES__['tests/fixtures/fixture.txt'];
-```
-
-Then used directly in test assertions:
+Fixtures can be used directly in test assertions:
 
 ```javascript
 var assert = require('assert');
+var txt = window.__FIXTURES__['tests/fixtures/fixture.txt'];
 
 // Assertion
 assert.strictEqual(txt, 'Bar', 'Text content matches!');
 ```
 
-Or injected, parsed, and modified:
+Or injected, parsed, and modified as needed:
 
 ```javascript
+var css  = window.__FIXTURES__['tests/fixtures/fixture.css'];
+var html = window.__FIXTURES__['tests/fixtures/fixture.html'];
+var json = window.__FIXTURES__['tests/fixtures/fixture.json'];
+
 // Injecting / Parsing
 before(function() {
   // Inject CSS
