@@ -47,15 +47,16 @@ function fileFixtures(args, config, logger, basePath) {
         var filePath = file.originalPath
             .replace(settings.stripBasePath ? basePath : '', '')
             .replace(settings.stripPrefix || '', '');
-        var key = util.format('%s[\'%s\']', GLOBALVAR, settings.transformKey(filePath) || filePath);
+
+        filePath = settings.transformKey(filePath) || filePath;
+
+        var key = util.format('%s[\'%s\']', GLOBALVAR, filePath);
 
         if (output.indexOf(key) === -1) {
-            var val = content.replace(/([\\\r\n'])/g, '\\$1');
-
-            val = settings.transformContent(key, val) || val;
-
             log.debug('Processing', file.originalPath);
-            output += util.format('\n%s = \'%s\';\n', key, val);
+            content = settings.transformContent(filePath, content) || content;
+            content = content.replace(/([\\\r\n'])/g, '\\$1');
+            output += util.format('\n%s = \'%s\';\n', key, content);
             fs.writeFileSync(FILEPATH, output);
         }
 
