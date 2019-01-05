@@ -5,13 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=developers,frontend,javascript,karma)
 
-A Karma plugin that stores file content as a global object.
+A Karma plugin that makes file content accessible from within test environments.
 
 ---
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Options](#options)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Options](#options)
 
 ---
 
@@ -31,7 +31,6 @@ app
 │   ├── fixtures
 │   │   ├── fixture.css
 │   │   ├── fixture.html
-│   │   ├── fixture.js
 │   │   ├── fixture.json
 │   │   └── fixture.txt
 │   └── app.test.js
@@ -59,7 +58,7 @@ module.exports = function(config) {
 };
 ```
 
-Karma will load the specified fixture files and store each file's content within a global object accessible to all test files:
+Fixture content is stored as a global object accessible in your test environment:
 
 ```javascript
 // app.test.js
@@ -69,51 +68,69 @@ console.log(window.__FIXTURES__);
 ```javascript
 // Output
 {
-  "tests/fixtures/fixture.css" = 'p { color: red; }',
-  "tests/fixtures/fixture.html" = '<p>Hello World!</p>',
-  "tests/fixtures/fixture.js" = 'var a = 1;',
+  "tests/fixtures/fixture.css" = 'body { color: red; }',
+  "tests/fixtures/fixture.html" = '<p>Foo</p>',
   "tests/fixtures/fixture.json" = '{ "a": 1 }',
-  "tests/fixtures/fixture.txt" = 'Hello World'
+  "tests/fixtures/fixture.txt" = 'Bar'
 }
 ```
 
-Fixtures can be accessed using their file path as an object key, then injected or parsed as needed:
+Fixtures can be accessed via their file path:
 
 ```javascript
-// app.test.js
-var htmlFixture = window.__FIXTURES__['tests/fixtures/fixture.html'];
-var jsonFixture = JSON.parse(window.__FIXTURES__['tests/fixtures/fixture.json']);
+var css  = window.__FIXTURES__['tests/fixtures/fixture.css'];
+var html = window.__FIXTURES__['tests/fixtures/fixture.html'];
+var json = window.__FIXTURES__['tests/fixtures/fixture.json'];
+var txt  = window.__FIXTURES__['tests/fixtures/fixture.txt'];
+```
 
+Then used directly in test assertions:
+
+```javascript
+var assert = require('assert');
+
+// Assertion
+assert.strictEqual(txt, 'Bar', 'Text content matches!');
+```
+
+Or injected, parsed, and modified:
+
+```javascript
+// Injecting / Parsing
 before(function() {
-  // Inject HTML Fixture
-  document.body.insertAdjacentHTML('beforeend', htmlFixture);
+  // Inject CSS
+  document.body.insertAdjacentHTML('beforeend', '<style>' + css + '</style>');
+  console.log(getComputedStyle(document.body).color);
 
+  // Inject HTML
+  document.body.insertAdjacentHTML('beforeend', html);
   console.log(document.querySelector('p').textContent);
-  console.log(jsonFixture);
+
+  // Parse JSON
+  json = JSON.parse(json);
+  console.log(json.a);
 });
 ```
 
 ```javascript
 // Output
-"Hello World!"
-
-{
-  "a" = 1
-}
+"rgb(255, 0, 0)"
+"Foo"
+1
 ```
 
 ## Options
 
-* [globalName](#optionsglobalname)
-* [stripBasePath](#optionsstripbasepath)
-* [stripPrefix](#optionsstripprefix)
-* [transformKey](#optionstransformkey)
-* [transformContent](#optionstransformcontent)
+- [globalName](#optionsglobalname)
+- [stripBasePath](#optionsstripbasepath)
+- [stripPrefix](#optionsstripprefix)
+- [transformKey](#optionstransformkey)
+- [transformContent](#optionstransformcontent)
 
 ### options.globalName
 
-* Type: `string`
-* Default: `'__FIXTURES__'`
+- Type: `string`
+- Default: `'__FIXTURES__'`
 
 Sets the name of the global fixtures object.
 
@@ -133,8 +150,8 @@ module.exports = function(config) {
 
 ### options.stripBasePath
 
-* Type: `boolean`
-* Default: `true`
+- Type: `boolean`
+- Default: `true`
 
 Removes the base path from each fixture key.
 
@@ -156,8 +173,8 @@ module.exports = function(config) {
 
 ### options.stripPrefix
 
-* Type: `string`
-* Default: `null`
+- Type: `string`
+- Default: `null`
 
 Removes the specified string from each fixture key.
 
@@ -177,8 +194,8 @@ module.exports = function(config) {
 
 ### options.transformKey
 
-* Type: `function`
-* Arguments:
+- Type: `function`
+- Arguments:
   1. **path**: The path of the current fixture file
 
 Callback after each fixture file is loaded. Allows modifying the object key used to access the file content in the global fixtures object.
@@ -200,8 +217,8 @@ module.exports = function(config) {
 
 ### options.transformContent
 
-* Type: `function`
-* Arguments:
+- Type: `function`
+- Arguments:
   1. **path**: The path of the current fixture file
   1. **content**: The text content of the current fixture file
 
