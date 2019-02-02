@@ -43,7 +43,7 @@ function fileFixtures(args, config, logger, basePath) {
     output += util.format('%s = %s || {};\n', GLOBALVAR, GLOBALVAR);
 
     return function(content, file, done) {
-        var basePath = path.normalize(config.basePath + '/');
+        var basePath = path.posix.normalize(config.basePath + '/');
         var filePath = file.originalPath
             .replace(settings.stripBasePath ? basePath : '', '')
             .replace(settings.stripPrefix || '', '');
