@@ -6,8 +6,7 @@
 
 - Added unit and CI tests.
 - Removed the `stripBasePath` option for better cross-platform development. The
-  base path is still removed from fixture keys. Doing so is now no longer
-  optional.
+  base path is still removed from fixture keys, it is just no longer optional.
 - Fixed file handling to allow specifying fixture paths only in the
   `preprocessors` section. Previously these files would also have to be included
   in the `files` section of a karma configuration.
