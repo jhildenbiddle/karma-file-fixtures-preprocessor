@@ -69,10 +69,10 @@ console.log(window.__FIXTURES__);
 ```javascript
 // Output
 {
-  "tests/fixtures/fixture.css" = 'body { color: red; }',
-  "tests/fixtures/fixture.html" = '<p>Foo</p>',
-  "tests/fixtures/fixture.json" = '{ "a": 1 }',
-  "tests/fixtures/fixture.txt" = 'Bar'
+  "tests/fixtures/fixture.css": "body { color: red; }",
+  "tests/fixtures/fixture.html": "<p>Hello</p>",
+  "tests/fixtures/fixture.json": "{ \"a\": 1 }",
+  "tests/fixtures/fixture.txt": "Some Text"
 }
 ```
 
@@ -83,7 +83,7 @@ var assert = require('assert');
 var txt = window.__FIXTURES__['tests/fixtures/fixture.txt'];
 
 // Assertion
-assert.strictEqual(txt, 'Bar', 'Text content matches!');
+assert.strictEqual(txt, 'Some Text', 'Text content matches!');
 ```
 
 Or injected, parsed, and modified as needed:
@@ -112,7 +112,7 @@ before(function() {
 ```javascript
 // Output
 "rgb(255, 0, 0)"
-"Foo"
+"Hello"
 1
 ```
 
