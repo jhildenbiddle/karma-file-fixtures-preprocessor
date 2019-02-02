@@ -33,7 +33,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "karma start && karma start --usepluginoptions"
+    "test": "karma start && karma start --usepluginoptions",
+    "version": "npm test"
   },
   "devDependencies": {
     "chai": "^4.2.0",
