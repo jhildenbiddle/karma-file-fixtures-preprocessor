@@ -118,7 +118,6 @@ before(function() {
 ## Options
 
 - [globalName](#optionsglobalname)
-- [stripBasePath](#optionsstripbasepath)
 - [stripPrefix](#optionsstripprefix)
 - [transformKey](#optionstransformkey)
 - [transformContent](#optionstransformcontent)
@@ -139,29 +138,6 @@ module.exports = function(config) {
     // ...
     fileFixtures: {
       globalName: '__FIXTURES__' // default
-    }
-  });
-};
-```
-
-### options.stripBasePath
-
-- Type: `boolean`
-- Default: `true`
-
-Removes the base path from each fixture key.
-
-When `true`, the file path used for each fixture key will be relative to the directory containing your `karma.conf.js` file. When `false`, the absolute file path will be used for each the fixture key.
-
-**Example**
-
-```javascript
-// karma.conf.js
-module.exports = function(config) {
-  config.set({
-    // ...
-    fileFixtures: {
-      stripBasePath: true // default
     }
   });
 };
