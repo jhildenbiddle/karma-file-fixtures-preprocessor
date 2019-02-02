@@ -5,7 +5,7 @@ const expect = require('chai').expect;
 
 // Constants & Variables
 // =============================================================================
-const karmaConfig = window.__karma__.config;
+const karmaConfig  = window.__karma__.config;
 const pluginConfig = karmaConfig.fileFixtures || {};
 
 
@@ -16,14 +16,10 @@ describe('karma-file-fixtures-preprocessor', function() {
     const globalName = pluginConfig.globalName || '__FIXTURES__';
     const fixtures   = window[globalName];
 
-    // Option: globalName
-    // -------------------------------------------------------------------------
     it(`adds a global window["${globalName}"] object`, function() {
         expect(fixtures).to.be.an('object');
     });
 
-    // Option: stripBasePath
-    // -------------------------------------------------------------------------
     it('strips base path from fixture object keys', function() {
         Object.keys(fixtures).forEach(key => {
             expect(key).to.not.have.string(baseDir);
