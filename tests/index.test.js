@@ -24,20 +24,11 @@ describe('karma-file-fixtures-preprocessor', function() {
 
     // Option: stripBasePath
     // -------------------------------------------------------------------------
-    if (pluginConfig.stripBasePath === false) {
-        it('includes base path in fixture object keys', function() {
-            Object.keys(fixtures).forEach(key => {
-                expect(key).to.have.string(baseDir);
-            });
+    it('strips base path from fixture object keys', function() {
+        Object.keys(fixtures).forEach(key => {
+            expect(key).to.not.have.string(baseDir);
         });
-    }
-    else {
-        it('strips base path from fixture object keys', function() {
-            Object.keys(fixtures).forEach(key => {
-                expect(key).to.not.have.string(baseDir);
-            });
-        });
-    }
+    });
 
     // Option: stripPrefix
     // -------------------------------------------------------------------------

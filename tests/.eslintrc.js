@@ -13,6 +13,7 @@ module.exports = {
         "ecmaVersion": 8,
     },
     "rules": {
+        "linebreak-style"         : "off",
         "mocha/no-global-tests"   : ["error"],
         "mocha/no-identical-title": ["error"],
         "mocha/no-mocha-arrows"   : ["error"],
