@@ -1,6 +1,7 @@
 # karma-file-fixtures-preprocessor
 
 [![NPM](https://img.shields.io/npm/v/karma-file-fixtures-preprocessor.svg?style=flat-square)](https://www.npmjs.com/package/karma-file-fixtures-preprocessor)
+[![Build Status](https://img.shields.io/travis/jhildenbiddle/karma-file-fixtures-preprocessor/master.svg?style=flat-square)](https://travis-ci.org/jhildenbiddle/karma-file-fixtures-preprocessor)
 [![Codacy](https://img.shields.io/codacy/grade/0721e159e25c414ca670ce93ac5709c9.svg?style=flat-square)](https://www.codacy.com/app/jhildenbiddle/karma-file-fixtures-preprocessor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jhildenbiddle/karma-file-fixtures-preprocessor&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=developers,frontend,javascript,karma)
