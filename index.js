@@ -33,12 +33,27 @@ function fileFixtures(args, config, logger, basePath) {
 
     var GLOBALVAR = 'window.' + settings.globalName;
 
+    // Add plugin-generated JavaScript as first served file
     config.files.unshift({
         pattern : FILEPATH,
         included: true,
         served  : true,
         watched : true
     });
+
+    // Add file paths associated with plugin
+    for (const path in config.preprocessors) {
+        const isFileFixturePath = config.preprocessors[path].indexOf('file-fixtures') !== -1;
+
+        if (isFileFixturePath) {
+            config.files.unshift({
+                pattern : path,
+                included: false,
+                served  : false,
+                watched : true
+            });
+        }
+    }
 
     output += util.format('%s = %s || {};\n', GLOBALVAR, GLOBALVAR);
 
