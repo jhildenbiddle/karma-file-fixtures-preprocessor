@@ -70,11 +70,8 @@ function fileFixtures(args, config, logger, basePath) {
         if (output.indexOf(key) === -1) {
             log.debug('Processing', file.originalPath);
             content = settings.transformContent(filePath, content) || content;
-            if (settings.stripNewLineChars) {
-                content = content.replace(/([\\\r\n'])/g, '\\$1');
-            } else {
-                content = content.replace(/([\\\r\n'])/g, '\\n');
-            }
+            var newLineReplaceChar = settings.stripNewLineChars ? '\\$1' : '\\n';
+            content = content.replace(/([\\\r\n'])/g, newLineReplaceChar);
             output += util.format('\n%s = \'%s\';\n', key, content);
             fs.writeFileSync(FILEPATH, output);
         }
