@@ -120,6 +120,7 @@ before(function() {
 
 - [globalName](#optionsglobalname)
 - [stripPrefix](#optionsstripprefix)
+- [stripNewLineChars](#optionsstripNewLineChars)
 - [transformKey](#optionstransformkey)
 - [transformContent](#optionstransformcontent)
 
@@ -160,6 +161,28 @@ module.exports = function(config) {
     // ...
     fileFixtures: {
       stripPrefix: null // default
+    }
+  });
+};
+```
+
+### options.stripNewLineChars
+
+- Type: `boolean`
+- Default: `true`
+
+Removes \r and \n from the file content.
+If set to false, it will keep those chars.
+
+**Example**
+
+```javascript
+// karma.conf.js
+module.exports = function(config) {
+  config.set({
+    // ...
+    fileFixtures: {
+      stripNewLineChars: true // default
     }
   });
 };
