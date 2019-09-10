@@ -61,6 +61,7 @@ module.exports = function(config) {
             globalName   : '__TEXT_FIXTURES__',
             stripBasePath: false,
             stripPrefix  : 'tests/fixtures/',
+            stripNewLineChars: true,
             transformKey(path) {
                 return path + '-transformKey';
             },
