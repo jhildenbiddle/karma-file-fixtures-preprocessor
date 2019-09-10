@@ -72,6 +72,8 @@ function fileFixtures(args, config, logger, basePath) {
             content = settings.transformContent(filePath, content) || content;
             if (settings.stripNewLineChars) {
                 content = content.replace(/([\\\r\n'])/g, '\\$1');
+            } else {
+                content = content.replace(/([\\\r\n'])/g, '\\n');
             }
             output += util.format('\n%s = \'%s\';\n', key, content);
             fs.writeFileSync(FILEPATH, output);
