@@ -69,7 +69,9 @@ function fileFixtures(args, config, logger, basePath) {
         if (output.indexOf(key) === -1) {
             log.debug('Processing', file.originalPath);
             content = settings.transformContent(filePath, content) || content;
-            content = content.replace(/([\\\r\n'])/g, '\\$1');
+            if (settings.stripNewLineChars == undefined || settings.stripNewLineChars) {
+                content = content.replace(/([\\\r\n'])/g, '\\$1');
+            }
             output += util.format('\n%s = \'%s\';\n', key, content);
             fs.writeFileSync(FILEPATH, output);
         }
