@@ -12,6 +12,7 @@ var util = require('util');
 var DEFAULTS = {
     globalName: '__FIXTURES__',
     stripPrefix: null,
+    stripNewLineChars: true,
     transformKey: function(path) {
         return path;
     },
@@ -69,7 +70,7 @@ function fileFixtures(args, config, logger, basePath) {
         if (output.indexOf(key) === -1) {
             log.debug('Processing', file.originalPath);
             content = settings.transformContent(filePath, content) || content;
-            if (settings.stripNewLineChars == undefined || settings.stripNewLineChars) {
+            if (settings.stripNewLineChars) {
                 content = content.replace(/([\\\r\n'])/g, '\\$1');
             }
             output += util.format('\n%s = \'%s\';\n', key, content);
