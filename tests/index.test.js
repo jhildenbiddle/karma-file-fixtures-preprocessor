@@ -26,6 +26,20 @@ describe('karma-file-fixtures-preprocessor', function() {
         });
     });
 
+    if (!pluginConfig.transformKey && !pluginConfig.transformContent) {
+        it('generates fixtures matching file content', async function() {
+            const filePaths = Object.keys(fixtures);
+
+            for (const filePath of filePaths) {
+                const fetchResponse = await fetch(`/base/${filePath}`);
+                const fetchText     = await fetchResponse.text();
+                const fixture       = fixtures[filePath];
+
+                expect(fixture).to.equal(fetchText);
+            }
+        });
+    }
+
     // Option: stripPrefix
     // -------------------------------------------------------------------------
     if (pluginConfig.stripPrefix) {

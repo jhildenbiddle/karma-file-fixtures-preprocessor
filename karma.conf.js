@@ -21,7 +21,9 @@ const settings = {
         baseDir: process.cwd()
     },
     files: [
-        files.test
+        files.test,
+        // Served only (Access in tests by prepending /base/ to path)
+        { pattern: files.fixtures, included: false, served: true, watched: true }
     ],
     plugins: [
         'karma-*',
