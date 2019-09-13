@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0
+
+*2019-09-12*
+
+- Fixed handling of end-of-line (EOL) control characters in files/fixtures. This
+  change necessitates a major versoin bump as multi-line fixtures will differ
+  from the previous version.
+- Fixed warning message displayed when path specified in config.preprocessors
+  is also specified in config.files
+
 ## 2.0.0
 
 *2019-02-01*
