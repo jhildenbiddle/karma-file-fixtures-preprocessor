@@ -44,7 +44,7 @@ function fileFixtures(args, config, logger, basePath) {
     // Add file paths associated with plugin to config.files array
     for (const key in config.preprocessors) {
         const isFileFixturePath = config.preprocessors[key].indexOf('file-fixtures') !== -1;
-        const isInFilePatterns  = CONFIG_FILE_PATTERNS.indexOf(key);
+        const isInFilePatterns  = CONFIG_FILE_PATTERNS.indexOf(key) !== -1;
 
         if (isFileFixturePath && !isInFilePatterns) {
             config.files.unshift({
