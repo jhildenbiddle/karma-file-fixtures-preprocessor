@@ -1,11 +1,17 @@
 # Change Log
 
+## 3.0.1
+
+*2019-12-03*
+
+- Fixed check for duplicate paths in configuration
+
 ## 3.0.0
 
 *2019-09-12*
 
 - Fixed handling of end-of-line (EOL) control characters in files/fixtures. This
-  change necessitates a major versoin bump as multi-line fixtures will differ
+  change necessitates a major version bump as multi-line fixtures will differ
   from the previous version.
 - Fixed warning message displayed when path specified in config.preprocessors
   is also specified in config.files

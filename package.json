@@ -1,6 +1,6 @@
 {
   "name": "karma-file-fixtures-preprocessor",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Karma plugin that makes file content accessible within test environments",
   "author": "John Hildenbiddle <http://hildenbiddle.com>",
   "license": "MIT",
