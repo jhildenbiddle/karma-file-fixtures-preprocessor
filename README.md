@@ -1,4 +1,4 @@
-# karma-file-fixtures-preprocessor
+# karma-file-fixtures-preprocessor <!-- omit in toc -->
 
 [![NPM](https://img.shields.io/npm/v/karma-file-fixtures-preprocessor.svg?style=flat-square)](https://www.npmjs.com/package/karma-file-fixtures-preprocessor)
 [![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/jhildenbiddle/karma-file-fixtures-preprocessor/Build%20&%20Test/master?label=checks&style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/actions?query=branch%3Amaster+)
@@ -13,6 +13,8 @@ A Karma plugin that makes file content accessible within test environments.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
@@ -119,12 +121,13 @@ before(function() {
 
 ## Options
 
-- [globalName](#optionsglobalname)
-- [stripPrefix](#optionsstripprefix)
-- [transformKey](#optionstransformkey)
-- [transformContent](#optionstransformcontent)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Options](#options)
+- [Contact](#contact)
+- [License](#license)
 
-### options.globalName
+### options.globalName <!-- omit in toc -->
 
 - Type: `string`
 - Default: `'__FIXTURES__'`
@@ -145,7 +148,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.stripPrefix
+### options.stripPrefix <!-- omit in toc -->
 
 - Type: `string`
 - Default: `null`
@@ -166,7 +169,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.transformKey
+### options.transformKey <!-- omit in toc -->
 
 - Type: `function`
 - Arguments:
@@ -189,7 +192,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.transformContent
+### options.transformContent <!-- omit in toc -->
 
 - Type: `function`
 - Arguments:
