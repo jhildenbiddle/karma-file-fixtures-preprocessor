@@ -33,6 +33,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . && markdownlint . --ignore node_modules",
     "test": "karma start && karma start --usepluginoptions",
     "version": "npm test"
   },
@@ -48,6 +49,7 @@
     "karma-mocha": "^2.0.1",
     "karma-mocha-reporter": "^2.2.5",
     "karma-webpack": "^5.0.0",
+    "markdownlint-cli": "^0.28.1",
     "mocha": "^9.1.1",
     "webpack": "^5.52.0"
   }

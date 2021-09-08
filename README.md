@@ -26,6 +26,7 @@ npm install karma-file-fixtures-preprocessor --save-dev
 
 Given the following directory structure:
 
+<!-- markdownlint-disable-next-line MD040 -->
 ```
 app
 ├── tests
