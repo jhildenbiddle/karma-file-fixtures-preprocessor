@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/karma-file-fixtures-preprocessor.svg?style=flat-square)](https://www.npmjs.com/package/karma-file-fixtures-preprocessor)
 [![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/jhildenbiddle/karma-file-fixtures-preprocessor/Build%20&%20Test/master?label=checks&style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/actions?query=branch%3Amaster+)
-[![Codacy](https://img.shields.io/codacy/grade/566f77fd4e5c4aa1b70c2279d32243d0/master?style=flat-square)](https://app.codacy.com/gh/jhildenbiddle/css-vars-ponyfill/dashboard?branch=master)
+[![Codacy](https://img.shields.io/codacy/grade/566f77fd4e5c4aa1b70c2279d32243d0/master?style=flat-square)](https://app.codacy.com/gh/jhildenbiddle/karma-file-fixtures-preprocessor/dashboard?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=developers,frontend,javascript,karma)
 
