@@ -111,14 +111,7 @@ before(function() {
 
 ## Options
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Options](#options)
-- [Sponsorship](#sponsorship)
-- [Contact & Support](#contact--support)
-- [License](#license)
-
-### options.globalName <!-- omit in toc -->
+### globalName <!-- omit in toc -->
 
 - Type: `string`
 - Default: `'__FIXTURES__'`
@@ -139,7 +132,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.stripPrefix <!-- omit in toc -->
+### stripPrefix <!-- omit in toc -->
 
 - Type: `string`
 - Default: `null`
@@ -160,7 +153,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.transformKey <!-- omit in toc -->
+### transformKey <!-- omit in toc -->
 
 - Type: `function`
 - Arguments:
@@ -183,7 +176,7 @@ module.exports = function(config) {
 };
 ```
 
-### options.transformContent <!-- omit in toc -->
+### transformContent <!-- omit in toc -->
 
 - Type: `function`
 - Arguments:
