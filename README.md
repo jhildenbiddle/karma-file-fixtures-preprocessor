@@ -208,8 +208,6 @@ If you benefit from this project, please consider lending your support and encou
 
 Thank you! 🙏🏻
 
-<iframe src="https://github.com/sponsors/jhildenbiddle/button" title="Sponsor jhildenbiddle" height="35" width="116" style="border: 0; margin: 0;"></iframe>
-
 ## Contact & Support
 
 - Follow 👨🏻‍💻 **@jhildenbiddle** on [Twitter](https://twitter.com/jhildenbiddle) and [GitHub](https://github.com/jhildenbiddle) for announcements
