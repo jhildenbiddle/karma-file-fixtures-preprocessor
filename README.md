@@ -4,19 +4,9 @@
 [![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/jhildenbiddle/karma-file-fixtures-preprocessor/Build%20&%20Test/master?label=checks&style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/actions?query=branch%3Amaster+)
 [![Codacy](https://img.shields.io/codacy/grade/566f77fd4e5c4aa1b70c2279d32243d0/master?style=flat-square)](https://app.codacy.com/gh/jhildenbiddle/karma-file-fixtures-preprocessor/dashboard?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=developers,frontend,javascript,karma)
+[![Sponsor this project](https://img.shields.io/static/v1?style=flat-square&label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/jhildenbiddle)
 
 A Karma plugin that makes file content accessible within test environments.
-
----
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Options](#options)
-- [Contact](#contact)
-- [License](#license)
-
----
 
 ## Installation
 
@@ -124,7 +114,8 @@ before(function() {
 - [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
-- [Contact](#contact)
+- [Sponsorship](#sponsorship)
+- [Contact & Support](#contact--support)
 - [License](#license)
 
 ### options.globalName <!-- omit in toc -->
@@ -216,11 +207,22 @@ module.exports = function(config) {
 };
 ```
 
-## Contact
+## Sponsorship
 
-- Create a [Github issue](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/issues) for bug reports, feature requests, or questions
-- Follow [@jhildenbiddle](https://twitter.com/jhildenbiddle) for announcements
-- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor) or ❤️ [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=karma,developers,frontend,javascript) to support the project!
+A [sponsorship](https://github.com/sponsors/jhildenbiddle) is more than just a way to show appreciation for the open-source authors and projects we rely on; it can be the spark that ignites the next big idea, the inspiration to create something new, and the motivation to share so that others may benefit.
+
+If you benefit from this project, please consider lending your support and encouraging future efforts by [becoming a sponsor](https://github.com/sponsors/jhildenbiddle).
+
+Thank you! 🙏🏻
+
+<iframe src="https://github.com/sponsors/jhildenbiddle/button" title="Sponsor jhildenbiddle" height="35" width="116" style="border: 0; margin: 0;"></iframe>
+
+## Contact & Support
+
+- Follow 👨🏻‍💻 **@jhildenbiddle** on [Twitter](https://twitter.com/jhildenbiddle) and [GitHub](https://github.com/jhildenbiddle) for announcements
+- Create a 💬 [GitHub issue](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/issues) for bug reports, feature requests, or questions
+- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor) and 🐦 [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fkarma-file-fixtures-preprocessor&hashtags=karma,developers,frontend,javascript) to promote the project
+- Become a 💖 [sponsor](https://github.com/sponsors/jhildenbiddle) to support the project and future efforts
 
 ## License
 
