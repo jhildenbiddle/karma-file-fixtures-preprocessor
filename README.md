@@ -1,7 +1,7 @@
 # karma-file-fixtures-preprocessor <!-- omit in toc -->
 
 [![NPM](https://img.shields.io/npm/v/karma-file-fixtures-preprocessor.svg?style=flat-square)](https://www.npmjs.com/package/karma-file-fixtures-preprocessor)
-[![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/jhildenbiddle/karma-file-fixtures-preprocessor/Build%20&%20Test/master?label=checks&style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/actions?query=branch%3Amaster+)
+[![GitHub Workflow Status (master)](https://img.shields.io/github/actions/workflow/status/jhildenbiddle/karma-file-fixtures-preprocessor/test.yml?branch=master&label=checks&style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/actions?query=branch%3Amaster+)
 [![Codacy](https://img.shields.io/codacy/grade/566f77fd4e5c4aa1b70c2279d32243d0/master?style=flat-square)](https://app.codacy.com/gh/jhildenbiddle/karma-file-fixtures-preprocessor/dashboard?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/karma-file-fixtures-preprocessor/blob/master/LICENSE)
 [![Sponsor this project](https://img.shields.io/static/v1?style=flat-square&label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/jhildenbiddle)
